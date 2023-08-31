@@ -22,3 +22,10 @@ model_phicomm-k2p:
     - 版本：lean lede源码
     - 登录信息：IP 192.168.31.1，密码 password
     - 应用：ipv6支持组件、argon主题、定时重启、nat6助手、smartdns等。
+model_xiaomi-cr6608:
+  title: lede for xiaomi CR6608
+  body:
+    - 小米CR6608 lede固件
+    - 版本：lean lede源码
+    - 登录信息：IP 192.168.32.1，密码 password
+    - 应用：ipv6支持组件、argon主题、定时重启、nat6助手、smartdns、easymesh、frps等。 
