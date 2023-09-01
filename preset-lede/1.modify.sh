@@ -2,10 +2,17 @@
 
 #修改登录IP
 sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
-
+#修改SSH 欢迎界面
+sed -i 's/%D %V, %C/%D %V, %C by Flameshark 01\/09\/2023/g' package/base-files/files/etc/banner
+#修改时区
+sed -i "/set system.\@system\[-1\].timezone='UTC'/a\ \t\tset system.@system[-1].zonename='Asia\/Shanghai'" package/base-files/files/bin/config_generate
+sed -i "s/set system.\@system\[-1\].timezone='UTC'/set system.@system[-1].timezone='CST-8'/g" package/base-files/files/bin/config_generate
 #修改主机名
 #sed -i 's/OpenWrt/Xiaomi-Router/g' package/base-files/files/bin/config_generate
 #sed -i 's/OpenWrt/Phicomm-Router/g' package/base-files/files/bin/config_generate
+#修改Web UI
+sed -i "/(<%=pcdata(ver.luciversion)%>)/a\                        Compiled by Flameshark at 2023/09/01" package/lean/autocore/files/arm/index.htm
+sed -i "/(<%=pcdata(ver.luciversion)%>)/a\                        Compiled by Flameshark at 2023/09/01" package/lean/autocore/files/x86/index.htm
 
 #修改型号显示
 #sed -i 's/Xiaomi Mi Router 4A Gigabit Edition/Xiaomi 4A Gigabit/g' target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-gigabit.dts
