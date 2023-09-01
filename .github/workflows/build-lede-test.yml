@@ -106,7 +106,7 @@ jobs:
           chmod +x $CLONE_SH
           $CLONE_SH
           cat package/base-files/files/etc/banner
-          cat package/lean/autocore/files/x86/index.html | grep -E "pcdata|Flameshark"
+          cat package/lean/autocore/files/x86/index.htm | grep -E "pcdata|Flameshark"
 
       - name: 升级feeds
         run: |
@@ -127,7 +127,7 @@ jobs:
             sed -i "/lan) ipad=/clan) ipad=\${ipaddr:-\"${{ inputs.lan_ipad }}\"} ;;" \
               package/base-files/files/bin/config_generate
           cat package/base-files/files/etc/banner
-          cat package/lean/autocore/files/x86/index.html | grep -E "pcdata|Flameshark"
+          cat package/lean/autocore/files/x86/index.htm | grep -E "pcdata|Flameshark"
           :
 
       - name: 空间使用情况
