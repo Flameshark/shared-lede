@@ -25,6 +25,7 @@ sed -i "/(<%=pcdata(ver.luciversion)%>)/a\                        Compiled by Fl
 rm -rf feeds/packages/net/smartdns
 rm -rf package/feeds/packages/net/smartdns
 cp -r extra-files/smartdns feeds/packages/net/
+cp -rf extra-files/banner package/base-files/files/etc
 
 #复制uci-defaults脚本
 mkdir -p files/etc/uci-defaults
