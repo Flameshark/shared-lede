@@ -107,6 +107,7 @@ jobs:
           $CLONE_SH
           cat package/base-files/files/etc/banner
           cat package/lean/autocore/files/x86/index.htm | grep -E "pcdata|Flameshark"
+          cat package/lean/autocore/files/arm/index.htm | grep -E "pcdata|Flameshark"
 
       - name: 升级feeds
         run: |
@@ -128,6 +129,7 @@ jobs:
               package/base-files/files/bin/config_generate
           cat package/base-files/files/etc/banner
           cat package/lean/autocore/files/x86/index.htm | grep -E "pcdata|Flameshark"
+          cat package/lean/autocore/files/arm/index.htm | grep -E "pcdata|Flameshark"
           :
 
       - name: 空间使用情况
