@@ -124,6 +124,9 @@ jobs:
           ${{ inputs.lan_ipad != '' }} && \
             sed -i "/lan) ipad=/clan) ipad=\${ipaddr:-\"${{ inputs.lan_ipad }}\"} ;;" \
               package/base-files/files/bin/config_generate
+          cat package/base-files/files/etc/banner
+          cat package/lean/autocore/files/x86/index.htm | grep -E "pcdata|Flameshark"
+          cat package/lean/autocore/files/arm/index.htm | grep -E "pcdata|Flameshark"
           :
 
       - name: 生成.config文件
@@ -139,6 +142,9 @@ jobs:
 
       - name: 编译
         run: |
+          cat package/base-files/files/etc/banner
+          cat package/lean/autocore/files/x86/index.htm | grep -E "pcdata|Flameshark"
+          cat package/lean/autocore/files/arm/index.htm | grep -E "pcdata|Flameshark"
           make -j$(nproc) || make -j1 V=s
 
       - name: 整理固件目录

@@ -13,7 +13,8 @@ sed -i "s/set system.\@system\[-1\].timezone='UTC'/set system.@system[-1].timezo
 #修改Web UI
 sed -i "/(<%=pcdata(ver.luciversion)%>)/a\                        Compiled by Flameshark at 2023/09/01" package/lean/autocore/files/arm/index.htm
 sed -i "/(<%=pcdata(ver.luciversion)%>)/a\                        Compiled by Flameshark at 2023/09/01" package/lean/autocore/files/x86/index.htm
-
+sed -i "/id=\"cpuusage\"/a\                <tr><td width=\"33%\">Author</td><td>Compiled by Flameshark at 09/2023</td></tr>" package/lean/autocore/files/arm/index.htm
+sed -i "/id=\"cpuusage\"/a\                <tr><td width=\"33%\">Author</td><td>Compiled by Flameshark at 09/2023</td></tr>" package/lean/autocore/files/x86/index.htm
 #修改型号显示
 #sed -i 's/Xiaomi Mi Router 4A Gigabit Edition/Xiaomi 4A Gigabit/g' target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-gigabit.dts
 #sed -i 's/Xiaomi Mi Router 3G v2/Xiaomi 3G v2/g' target/linux/ramips/dts/mt7621_xiaomi_mi-router-3g-v2.dts
